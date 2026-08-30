@@ -12,7 +12,6 @@
         <div class="logo">
             <h1>PC Master 🚀</h1>
         </div>
-        <!-- Рядок пошуку комплектуючих -->
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Пошук комплектуючих за назвою..." oninput="handleSearch()">
         </div>
@@ -20,7 +19,6 @@
     </header>
 
     <div class="container">
-        <!-- Фільтри за категоріями -->
         <aside class="filters">
             <h3>Компоненти</h3>
             <button class="filter-btn active" onclick="filterCategory('all', this)">Всі товари</button>
@@ -34,17 +32,11 @@
             <button class="filter-btn" onclick="filterCategory('cooling', this)">Охолодження</button>
         </aside>
 
-        <!-- Вітрина товарів -->
-        <main class="products-grid" id="productsGrid">
-            <!-- Товари генеруються через JS -->
-        </main>
+        <main class="products-grid" id="productsGrid"></main>
 
-        <!-- Кошик покупця -->
         <aside class="cart">
             <h3>Ваша збірка</h3>
-            <div class="cart-items" id="cartItems">
-                <!-- Товари в кошику генеруються через JS -->
-            </div>
+            <div class="cart-items" id="cartItems"></div>
             <div class="cart-total">
                 <span>Всього:</span>
                 <span id="cartTotal">0 ₴</span>

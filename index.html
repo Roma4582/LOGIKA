@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Master — Магазин Комплектуючих</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>PC Master 🚀</h1>
+        </div>
+        <!-- Рядок пошуку комплектуючих -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Пошук комплектуючих за назвою..." oninput="handleSearch()">
+        </div>
+        <div class="header-info">Онлайн Конструктор ПК</div>
+    </header>
+
+    <div class="container">
+        <!-- Фільтри за категоріями -->
+        <aside class="filters">
+            <h3>Компоненти</h3>
+            <button class="filter-btn active" onclick="filterCategory('all', this)">Всі товари</button>
+            <button class="filter-btn" onclick="filterCategory('cpu', this)">Процесори (CPU)</button>
+            <button class="filter-btn" onclick="filterCategory('gpu', this)">Відеокарти (GPU)</button>
+            <button class="filter-btn" onclick="filterCategory('motherboard', this)">Материнські плати</button>
+            <button class="filter-btn" onclick="filterCategory('ram', this)">Оперативна пам'ять</button>
+            <button class="filter-btn" onclick="filterCategory('ssd', this)">Накопичувачі (SSD)</button>
+        </aside>
+
+        <!-- Вітрина товарів -->
+        <main class="products-grid" id="productsGrid">
+            <!-- Товари генеруються через JS -->
+        </main>
+
+        <!-- Кошик покупця -->
+        <aside class="cart">
+            <h3>Ваша збірка</h3>
+            <div class="cart-items" id="cartItems">
+                <!-- Товари в кошику генеруються через JS -->
+            </div>
+            <div class="cart-total">
+                <span>Всього:</span>
+                <span id="cartTotal">0 ₴</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" onclick="checkout()" disabled>Оформити замовлення</button>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
